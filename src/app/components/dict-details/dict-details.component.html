@@ -1,0 +1,39 @@
+<!-- Editable table -->
+<div class="card">
+  <h3 class="table-header">Dictionary Details - {{ this.currDictionary }}</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+        <span class="addRowSpan">
+            <a class="addRowButton" (click)="addRow()">
+              Add Row
+            </a>
+          </span>
+      <table class="table">
+        <tr>
+          <th class="table-header">Domain</th>
+          <th class="table-header">Range</th>
+          <th class="table-header">Remove Row</th>
+          </tr>
+   
+        <tr *ngFor="let dataRow of data | keyvalue; let id = index; trackBy: customTrackBy">
+          <td>
+            <span (keyup)="changeValue(id, dataRow.key, $event)" (blur)="updateKey(id, dataRow.key, dataRow.value, $event)" contenteditable="true" >{{dataRow.key}}</span>
+          </td>
+          <td>
+            <span (keyup)="changeValue(id, dataRow.value, $event)" (blur)="updateValue(id, dataRow.key, $event)" contenteditable="true">{{dataRow.value}}</span>
+          </td>
+          <td>
+            <span class="table-remove">
+              <button type="button" class="btn-remove" size="sm" (click)="remove(id, dataRow.key)">Remove</button>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <div>
+          <button class="updateButton" label="updateDictionary" (click) = "updateDictionary()">Update Dictionary</button>
+            <app-add-new-dict [showMe] = "showForm"></app-add-new-dict>
+        </div>   
+    </div>
+  </div>
+</div>
+<!-- Editable table -->

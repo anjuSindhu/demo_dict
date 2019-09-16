@@ -1,0 +1,13 @@
+<div class="dictList">
+  
+    <h3 class="list-header">Dictionary List</h3>
+
+    <div class="dict-Item" *ngFor="let dictionaryName of dictListsrvc.getDictionaryNames()">
+        <app-dict-item [dictName]="dictionaryName"></app-dict-item>
+    </div>
+ 
+</div>
+<div>
+  <button class="addButton" label="Add Dictionary" (click) = "toggleAddDictForm()">Add new Dictionary</button>
+    <app-add-new-dict [showMe] = "showForm"></app-add-new-dict>
+</div>

@@ -1,0 +1,48 @@
+.dictList {
+    position: relative;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border: 0;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+  }
+  .list-header{
+    font-size: 1rem;
+    text-align: center!important;
+    padding-bottom: 1rem!important;
+    padding-top: 1rem!important;
+    font-weight: 700!important;
+    text-transform: uppercase!important;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+  }
+  .dict-Item{
+    padding: 10px;
+  }
+  .addButton{
+    margin:10px;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 8px;
+    color: rgba(73, 204, 249, 1.0);
+    border-color: rgba(73, 204, 249, 1.0);
+    background-color: transparent;    
+  }
+.card{
+  border-bottom:1px solid #eee;
+  box-shadow:none
+}
+
+.card .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}

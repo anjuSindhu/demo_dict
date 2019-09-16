@@ -1,0 +1,9 @@
+<div *ngIf="showMe">
+  <div class="add-input-wrapper">
+    <div><label>Enter dictionary name</label></div>
+    <div><input type="text"  [(ngModel)]="dictName"/></div>
+    <div><label>Enter Domain and Range</label></div>
+    <div><input type="text"  [(ngModel)]="domain"/><input type="text"  [(ngModel)]="range"/> </div>
+    <div><button class="btn-more-data" (click)="addData()">Add Data</button><button class="btn-submit" (click)="addDict()">Submit</button></div>
+  </div>
+</div> 
