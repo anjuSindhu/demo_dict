@@ -15,7 +15,7 @@
           <th class="table-header">Remove Row</th>
           </tr>
    
-        <tr *ngFor="let dataRow of data | keyvalue; let id = index; trackBy: customTrackBy">
+        <tr *ngFor="let dataRow of data | keyvalue; let id = index;">
           <td>
             <span (keyup)="changeValue(id, dataRow.key, $event)" (blur)="updateKey(id, dataRow.key, dataRow.value, $event)" contenteditable="true" >{{dataRow.key}}</span>
           </td>
@@ -31,8 +31,7 @@
       </table>
       <div>
           <button class="updateButton" label="updateDictionary" (click) = "updateDictionary()">Update Dictionary</button>
-            <app-add-new-dict [showMe] = "showForm"></app-add-new-dict>
-        </div>   
+      </div>   
     </div>
   </div>
 </div>

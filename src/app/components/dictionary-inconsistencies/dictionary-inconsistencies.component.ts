@@ -15,7 +15,7 @@ export class DictionaryInconsistenciesComponent implements OnInit {
   isDicSelected: boolean;
   private dicListItem: DictionaryListItem;
   private dictionary= new Dictionary();
-  private data: { [index: string]: string; };
+  data: { [index: string]: string; };
   
   constructor(private dicListSrvc: DictListService) { }
 

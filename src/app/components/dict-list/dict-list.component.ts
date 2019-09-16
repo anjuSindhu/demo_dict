@@ -9,13 +9,20 @@ import { DictListService } from '../../services/dict-list.service';
 export class DictListComponent implements OnInit {
 
   showForm: boolean = false;
-  //private noOfDictionaries: number;
+  dictList: string[];
 
   constructor(private dictListsrvc: DictListService) {
 
    }
 
   ngOnInit() {
+    this.getListOfDictionaryName();
+  }
+
+  getListOfDictionaryName(): string[]{console.log("fetching dic names");
+    this.dictList = this.dictListsrvc.getDictionaryNames();
+    console.log(" dic names" + JSON.stringify(this.dictList));
+    return this.dictList;
   }
   
   toggleAddDictForm(){

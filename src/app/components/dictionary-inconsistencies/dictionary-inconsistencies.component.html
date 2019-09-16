@@ -9,7 +9,7 @@
             <th class="table-header">Inconsistency</th>
           </tr>
      
-          <tr *ngFor="let dataRow of data | keyvalue; let id = index; trackBy: customTrackBy">
+          <tr *ngFor="let dataRow of data | keyvalue; let id = index;">
             <td>
               <span>{{dataRow.key}}</span>
             </td>

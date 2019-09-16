@@ -15,8 +15,7 @@ export class DictDetailsComponent implements OnInit {
   subscription: Subscription;
   private dicListItem: DictionaryListItem;
   private dictionary= new Dictionary();
-  private dicDataList: Array<any>=[];
-  private data: { [index: string]: string; };// = this.getDictionaryData();
+  data: { [index: string]: string; };// = this.getDictionaryData();
   isDicSelected: boolean;
   editField: string;
 
