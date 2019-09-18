@@ -9,6 +9,7 @@ import { DictListService } from '../../services/dict-list.service';
 export class DictListComponent implements OnInit {
 
   showForm: boolean = false;
+  isDicAdded: boolean = false;
   dictList: string[];
 
   constructor(private dictListsrvc: DictListService) {
@@ -17,11 +18,16 @@ export class DictListComponent implements OnInit {
 
   ngOnInit() {
     this.getListOfDictionaryName();
+    this.dictListsrvc.isDicAdded.subscribe( value => {
+      this.isDicAdded = value;
+      if(this.isDicAdded){
+        this.getListOfDictionaryName();
+      }
+    });
   }
 
-  getListOfDictionaryName(): string[]{console.log("fetching dic names");
+  getListOfDictionaryName(): string[]{
     this.dictList = this.dictListsrvc.getDictionaryNames();
-    console.log(" dic names" + JSON.stringify(this.dictList));
     return this.dictList;
   }
   

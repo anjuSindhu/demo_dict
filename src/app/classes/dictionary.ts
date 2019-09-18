@@ -3,11 +3,6 @@ import { Idictionary } from '../interfaces/idictionary';
 export class Dictionary implements Idictionary{
     public items: { [index: string]: string } = {};
     public dic_name: string;
-    //public dict_data = new Map();
-    /*constructor(name:string, data:Map<string,string>){
-        this.dic_name = name;
-        this.items = data;
-    }*/
     private count: number = 0;
  
     public ContainsKey(key: string): boolean {
